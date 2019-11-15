@@ -131,7 +131,7 @@ def normalized_x_corr_model(im_input_shape):
     a = Input(im_input_shape)
     b = Input(im_input_shape)
     model = Sequential()
-    model.add(Conv2D(kernel_size=(5, 5), filters=20, input_shape=(160, 60, 3), activation='relu'))
+    model.add(Conv2D(kernel_size=(5, 5), filters=20, input_shape=im_input_shape, activation='relu'))
     model.add(MaxPooling2D((2, 2)))
     model.add(Conv2D(kernel_size=(5, 5), filters=25, activation='relu'))
     model.add(MaxPooling2D((2, 2)))
